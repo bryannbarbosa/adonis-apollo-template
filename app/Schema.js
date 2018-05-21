@@ -1,16 +1,31 @@
+'use strict'
+
+/*
+|--------------------------------------------------------------------------
+| GraphQL Schema
+|--------------------------------------------------------------------------
+|
+| A GraphQL Schema is in essence the definition of a type system how the data available to you client is related
+| and what queries can be made to retrieve it.
+|
+| A complete guide on schema is available here.
+| https://graphql.org/learn/schema/
+|
+*/
+
 const { GraphQLString, GraphQLID, GraphQLList, GraphQLObjectType, GraphQLSchema, GraphQLInt } = require('graphql')
 const _ = require('lodash')
 
 const books = [
-    { id: '1', name: 'Harry Potter', genre: 'Fiction', authorId: '1' },
-    { id: '2', name: 'Little Prince', genre: 'History', authorId: '2' },
-    { id: '3', name: 'Origin of species', genre: 'Biology', authorId: '3' }
+    { id: '1', name: 'Introduction to Mathematical Philosophy', genre: 'Philosophy', authorId: '1' },
+    { id: '2', name: 'The Continuum', genre: 'Mathematics', authorId: '2' },
+    { id: '3', name: 'The Foundations Of Geometry', genre: 'Mathematics', authorId: '3' }
 ]
 
 const authors = [
-    { id: '1', name: 'J.K Rowling', age: 40 },
-    { id: '2', name: 'Antoine de Saint-Exupéry', age: 200 },
-    { id: '3', name: 'Charles Darwin', age: 300 }
+    { id: '1', name: 'Bertrand Russell', profession: 'Philosopher' },
+    { id: '2', name: 'Georg Cantor', profession: 'Mathematician' },
+    { id: '3', name: 'David Hilbert', profession: 'Mathematician' }
 ]
 
 const BookType = new GraphQLObjectType({
