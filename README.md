@@ -1,28 +1,19 @@
-# Adonis API application
+# Adonis GraphQL + Apollo Server
 
-This is the boilerplate for creating an API server in AdonisJs, it comes pre-configured with.
+This is a template for building GraphQL API server in AdonisJS, it comes pre-configured with functional example:
 
-1. Bodyparser
-2. Authentication
-3. CORS
-4. Lucid ORM
-5. Migrations and seeds
+1. AuthorType
+2. BookType 
+3. Query
+4. Mutations
 
 ## Setup
 
-Use the adonis command to install the blueprint
+Use the npm command to install dependencies: `npm install`.
 
-```bash
-adonis new yardstick --api-only
-```
+### Start Server
 
-or manually clone the repo and then run `npm install`.
+Run the following command to run startup server: `adonis serve --dev`
 
+To open request page for graphql, access `http://localhost:3333/graphiql`
 
-### Migrations
-
-Run the following command to run startup migrations.
-
-```js
-adonis migration:run
-```
